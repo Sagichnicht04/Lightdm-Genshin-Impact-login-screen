@@ -1,0 +1,57 @@
+#dialog{
+    position: absolute;
+    z-index: 5;
+    border-radius: 0.35em;
+    border: none;
+    font-size: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#dialog .title{
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    font-family: title;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+#dialog .input{
+    font-family: text;
+    align-self: center;
+    width: 23em;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-top: 1em;
+    padding-left: 0.5em;
+    padding-bottom: 1em;
+    border-radius: 0.25em;
+}
+#dialog .login{
+    width: 23.7em;
+    background-color: #383b40;
+    color: #e5cba8;
+    margin-top: 1.5em;
+}
+#dialog .use_virtual_keyboard{
+    color: #d7bc6f;
+    font-family: text;
+    margin-top: 1em;
+    text-align: center;
+    align-self: center;
+}	
+::placeholder {
+    color: #cfcfcf;
+    opacity: 1;
+}
+#dialog .close{
+    position: absolute;
+    top: 0.7em;
+    right: 0.7em;
+    font-size: 1em;
+    background: none;
+    border: none;
+    width: 1em;
+    height: 1em;
+}

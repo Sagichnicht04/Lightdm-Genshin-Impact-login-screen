@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Title';
+    src: url("title.ttf");
+}
+@font-face {
+    font-family: 'Text';
+    src: url("text.ttf");
+}
+
+html, body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    font-size: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.messageBox {
+    text-align: center;
+    visibility: hidden;
+}
+
+.corner{
+    position: absolute;
+    width: 3%;
+    height: 5%;
+    z-index: 10;
+    border-radius: 4em;
+}
+#reload_button{
+    top: 5%;
+    left: 3.2%;
+}
+#power_button{
+    bottom: 5%;
+    left: 3.2%;
+}
+#sessions_button{
+    bottom: 5%;
+    right: 3.2%;
+}
+
+
+.button:hover{
+    cursor: pointer;
+}
+#virtual_keyboard{
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    bottom: 5%;
+    height: fit-content;
+    z-index:5;
+    display:ruby;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 0.35em;
+    
+}
+.virtual_key{
+    background-color: #555E6E;
+    font-size: 1.2em;
+    margin: 0.2em;
+    padding: 0.25em;
+    border-radius: 0.1em;
+    color: #cfcfcf;
+    font-family: text;
+    width: 2em;
+    height: 2em;
+}
+.virtual_key:active{
+    color: #d7bc6f;
+}
