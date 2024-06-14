@@ -22,7 +22,10 @@ async function clock(){
         }
         document.querySelector("#big_clock_arrow").style.transform="rotate("+6*minute+"deg)";
         document.querySelector("#small_clock_arrow").style.transform="rotate("+30*reduced_hour+"deg)";
-        document.querySelector("#clock_background_time").src="clock/clock_background_"+name+".png";
+        let curr_src = document.querySelector("#clock_background_time");
+        if(!(curr_src.src.includes(name))){
+            curr_src.src="clock/clock_background_"+name+".png";
+        }
         document.querySelector("#digital_clock").innerText = (hour < 10 ? '0' : '') + hour + ":" + (minute < 10 ? '0' : '') + minute;
         await new Promise(r => setTimeout(r, 1000));
     }
