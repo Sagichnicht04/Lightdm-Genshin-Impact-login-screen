@@ -11,11 +11,29 @@ async function battery(){
             status = info.ac_status;
         }
         catch(exception){
-            level = 70;
+            level = last_level;
             status = 0;
         }
         document.querySelector("#battery_loading_icon").style.visibility = status==1 ? "":"hidden";
         if(last_level != level){
+            let diff = level - last_level;
+            let diffs = [Math.round(Math.abs(diff*10) * Math.random())];
+            diffs.push(Math.abs(diff*10)-diffs[0]);
+            let index=0;
+            let content = document.querySelector("#content");
+            document.querySelectorAll(".battery_change").forEach(element => {
+                element.innerText = (diff>0?"+":"") +diffs[index++];
+                element.style.left = (content.clientWidth*0.3 * Math.random() + content.clientWidth*0.3) + "px";
+                element.style.bottom = (content.clientHeight*0.15* Math.random() + content.clientHeight*0.05) + "px";
+                element.style.animation = (diff>0 ? "battery_gain":"battery_drop") + " 1.5s";
+                element.addEventListener("animationend",(event)=>{
+                    element.innerText="";
+                    element.style.animation="";
+                })
+            });
+
+
+
             last_level = level;
             if(level >= 0){
                 let color;
@@ -35,7 +53,7 @@ async function battery(){
                 document.querySelector("#battery_numeric").innerText = level+"0 / 1000";
             }
         }
-        await new Promise(r => setTimeout(r, 1000));
+        await new Promise(r => setTimeout(r, 2000));
     }
 }
 battery();

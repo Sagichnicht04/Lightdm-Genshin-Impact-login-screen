@@ -35,3 +35,54 @@
     object-fit: contain;
 
 }
+
+.battery_change{
+    position: absolute;
+    font-family: text;
+}
+
+@keyframes battery_drop{
+    0% {
+        font-size: 2em;
+        color: #FF9B08;
+        text-shadow: 0 0 2px #000;
+        transform: translateY(0%);
+        }
+    50% {
+        font-size: 1.3em;
+        color: #FF9B08;
+        text-shadow: 0 0 2px #000;
+        transform: translate(+50%, +200%);
+        opacity: 1;
+    }
+    100% {
+        font-size: 1.3em;
+        color: #FF9B08;
+        text-shadow: 0 0 2px #000;
+        transform: translate(+50%, +200%);
+        opacity: 0;
+    }
+}
+@keyframes battery_gain{
+    0% {
+        font-size: 2em;
+        color: #B5ED3F;
+        text-shadow: 0 0 2px #000;
+        transform: translateY(0%);
+        }
+    50% {
+        font-size: 1.3em;
+        color: #B5ED3F;
+        text-shadow: 0 0 2px #000;
+        transform: translate(+50%, -200%);
+        opacity: 1;
+    }
+    100% {
+        font-size: 1.3em;
+        color: #B5ED3F;
+        text-shadow: 0 0 2px #000;
+        transform: translate(+50%, -200%);
+        opacity: 0;
+    }
+}
+
