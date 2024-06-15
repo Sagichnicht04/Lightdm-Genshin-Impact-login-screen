@@ -14,6 +14,7 @@ async function battery(){
             level = 70;
             status = 0;
         }
+        document.querySelector("#battery_loading_icon").style.visibility = status==1 ? "":"hidden";
         if(last_level != level){
             last_level = level;
             if(level >= 0){
@@ -37,5 +38,4 @@ async function battery(){
         await new Promise(r => setTimeout(r, 1000));
     }
 }
-
 battery();
