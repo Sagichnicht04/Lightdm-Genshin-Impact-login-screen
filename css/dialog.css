@@ -34,6 +34,37 @@
     color: #e5cba8;
     margin-top: 1.5em;
 }
+#sessions_section .login{
+    margin-top: 5em;
+}
+#session_options{
+    position: absolute;
+    overflow: auto;
+    max-height: 20em;
+    background-color: white;
+    border-radius: 0.35em;
+    border: #9fa5ad solid;
+    padding: 0 !important;
+    width: 23.7em !important;
+}
+#session_options button{
+    width: 100%;
+    font-family: text;
+    font-size: 1em;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 1em;
+}
+#session_options button img{
+    width: 1em;
+    height: 1em;
+    margin-bottom: -0.2em;
+}
+#session_options::-webkit-scrollbar {
+    display: none;
+}
+
 #dialog .use_virtual_keyboard{
     color: #d7bc6f;
     font-family: text;

@@ -42,7 +42,7 @@
 		<span class="battery_change"></span>
 
 		<div id="virtual_keyboard"></div>
-		<div class="button corner" id="sessions_button" onclick="switchSession()"></div>
+		<div class="button corner" id="sessions_button" onclick="toggleSessionDialog()"></div>
 
 		<div class="messageBox" id="messages"></div>
 
@@ -58,8 +58,10 @@
 			<input class="login button input" type="button" value="Log in" onclick="login()"/>
 		</div>
 		<div id="sessions_section" hidden>
-			<select class="input" id="sessions_select"></select> <br>
-			<input class="login button input" type="button" value="Select" onclick="sessionSelected()"/>
+			<div id="session_options" class="input">
+				<button id="sessions_select" data-session=0 onclick="switchSession()"></button><br>
+			</div><br>
+			<input class="login button input" type="button" value="Select" onclick="toggleSessionDialog()"/>
 		</div>
 	</dialog>
 
